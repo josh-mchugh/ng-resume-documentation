@@ -1,9 +1,9 @@
 ---
 title: 'Overview'
-date: 2024-03-13T15:22:41+05:00
+date: 2024-03-13T22:41:00+05:00
 weight: 1
 ---
 
 ## ng-resume docs
 
-Whisper is a minimal documentation theme for Hugo. The design and functionality is intentionally minimal. We’re aiming for a similar feel to a Github readme.
+ng-resume is a simple to use web application to easily build a nicely styled resume.
