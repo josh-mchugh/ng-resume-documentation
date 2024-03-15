@@ -57,6 +57,14 @@
     {{ end}}
   </div>
 
+  {{ if .Store.Get "hasMermaid" }}
+    <script type="text/javascript">
+      function() {
+          mermaid.initialize();
+      }();
+    </script>
+  {{ end }}
+
   {{ partial "sub-footer.html" . }}
 
   {{ $scripts := resources.Get "js/scripts.js" }}

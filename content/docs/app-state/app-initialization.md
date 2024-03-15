@@ -6,9 +6,12 @@ weight: 1
 summary: Application state documentation and diagrams.
 ---
 
-Lorem markdownum aequalis strigis. Saetigeri iubeas, vultu huic alvum nondum
-de obside ut laniavit arbor palmis, cum quin. Rupes vetat videndo, armigerae
-crimen habet Priamum nec.
+The application state is made up of four data types.
+
+1. Resume State is the structured data for the Resume.
+2. Layout State is the structured data for the selected Layout.
+3. Form State is the data format of Resume in a user input styled structure.
+4. Display State is the data combination of Resume and Layout data to produce a Display data.
 
 ```mermaid
 flowchart TD
@@ -16,5 +19,13 @@ flowchart TD
     B --> C[Initialize\nResume]
     B --> D[Initialize\nLayout]
     B --> E[Initialize\nForm]
-    C & D--> F[Initialize\nSections]
+    C & D--> F[Initialize\nDisplay]
 ```
+
+When the application starts, it will retrieve the data and intialize the application state. 
+Currently, the application initialization happens within the application as no data id stored 
+outside of the application.
+
+When the application starts, it will need to initialize the states. Currently the application 
+intializes Resume, Layout, and Form states on load. Upon their success, the display stated is 
+intialized.
